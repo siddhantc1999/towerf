@@ -13,7 +13,7 @@ public class TargetLocator : MonoBehaviour
     GameObject closestenemy;
     [SerializeField]GameObject target;
     public float thresholddistance=20f;
-    //[SerializeField]ParticleSystem particleSystem;
+    [SerializeField] ParticleSystem particleSystem;
     // Start is called before the first frame update
     void Start()
     {
@@ -57,12 +57,12 @@ public class TargetLocator : MonoBehaviour
         {
             //Debug.Log("the name of enemy mover" + target.transform.name);
             headLocator.LookAt(new Vector3(target.transform.position.x, transform.position.y, target.transform.position.z));
-            //particleSystem.enableEmission = true;
+            particleSystem.enableEmission = true;
         }
         else
         {
             target = null;
-            //particleSystem.enableEmission = false;
+            particleSystem.enableEmission = false;
         }
     }
 }
