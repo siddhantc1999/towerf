@@ -21,7 +21,7 @@ public class TargetLocator : MonoBehaviour
         enemyMovers = FindObjectsOfType<EnemyMover>();
        
         closestdistance = maxdistance;
-
+        Debug.Log(1 == 1);
     }
 
     // Update is called once per frame
